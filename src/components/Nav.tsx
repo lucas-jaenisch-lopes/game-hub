@@ -4,13 +4,13 @@ import {
   Input,
   InputGroup,
   InputLeftElement,
-  Switch,
 } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
+import ColorModeSwitch from "./ColorModeSwitch";
 
 const Nav = () => {
   return (
-    <HStack>
+    <HStack justifyContent="space-between" padding="10px">
       <Image
         borderRadius="10px"
         boxSize="35px"
@@ -22,10 +22,7 @@ const Nav = () => {
         </InputLeftElement>
         <Input borderRadius="80px" placeholder="Basic usage"></Input>
       </InputGroup>
-      <HStack>
-        <Switch id="darkMode" size="md"></Switch>
-        <p>Dark Mode</p>
-      </HStack>
+      <ColorModeSwitch />
     </HStack>
   );
 };
