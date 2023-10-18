@@ -1,21 +1,23 @@
-import { Text, HStack, Heading, Image } from "@chakra-ui/react";
+import { HStack, Heading, Image, Text, Button, Link } from "@chakra-ui/react";
 import useGenres from "../hooks/useGenres";
 
 const GenreList = () => {
-  const { genres, error, isLoading } = useGenres();
+  const { data } = useGenres();
 
   return (
     <div>
       <Heading>Genres</Heading>
-      {genres.map((genre) => (
-        <HStack padding="5px">
-          <Image
-            src={genre.image_background}
-            borderRadius="10px"
-            boxSize="35px"
-          />
-          <Text>{genre.name}</Text>
-        </HStack>
+      {data.map((genre) => (
+        <Link>
+          <HStack padding="5px">
+            <Image
+              src={genre.image_background}
+              borderRadius="10px"
+              boxSize="35px"
+            />
+            <Text variant="link">{genre.name}</Text>
+          </HStack>
+        </Link>
       ))}
     </div>
   );
