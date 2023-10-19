@@ -11,17 +11,20 @@ import {
 import useGenres from "../hooks/useGenres";
 import getCroppedImageUrl from "../services/image-url";
 
-const GenreList = () => {
+interface Bibs {
+  onSelectedGenre: (category: string) => void;
+}
+
+const GenreList = ({ onSelectedGenre }: Bibs) => {
   const { data, error, isLoading } = useGenres();
 
   return (
     <>
-      <List padding="10px" spacing="10px" px="10px">
+      <List spacing="10px">
         <Heading>Genres</Heading>
         {isLoading && <Spinner></Spinner>}
-        {error && <Text>{error}</Text>}
         {data.map((genre) => (
-          <ListItem key={genre.id}>
+          <ListItem key={genre.id} onClick={() => onSelectedGenre(genre.name)}>
             <Link key={genre.id}>
               <HStack>
                 <Image
@@ -29,7 +32,9 @@ const GenreList = () => {
                   borderRadius="10px"
                   boxSize="32px"
                 />
-                <Text variant="link">{genre.name}</Text>
+                <Text whiteSpace="nowrap" variant="link">
+                  {genre.name}
+                </Text>
               </HStack>
             </Link>
           </ListItem>
