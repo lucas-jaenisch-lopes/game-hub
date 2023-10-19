@@ -13,8 +13,8 @@ const Nav = () => {
     <HStack justifyContent="space-between" padding="10px">
       <Image
         borderRadius="10px"
-        boxSize="35px"
-        src="https://bit.ly/dan-abramov"
+        boxSize="40px"
+        src="https://via.placeholder.com/40"
       />
       <InputGroup>
         <InputLeftElement pointerEvents="none">
