@@ -8,14 +8,14 @@ import {
   ListItem,
   Spinner,
 } from "@chakra-ui/react";
-import useGenres from "../hooks/useGenres";
+import useGenres, { Genre } from "../hooks/useGenres";
 import getCroppedImageUrl from "../services/image-url";
 
-interface Bibs {
-  onSelectedGenre: (category: string) => void;
+interface Props {
+  onSelectedGenre: (genre: Genre) => void;
 }
 
-const GenreList = ({ onSelectedGenre }: Bibs) => {
+const GenreList = ({ onSelectedGenre }: Props) => {
   const { data, error, isLoading } = useGenres();
 
   return (
@@ -24,7 +24,7 @@ const GenreList = ({ onSelectedGenre }: Bibs) => {
         <Heading>Genres</Heading>
         {isLoading && <Spinner></Spinner>}
         {data.map((genre) => (
-          <ListItem key={genre.id} onClick={() => onSelectedGenre(genre.name)}>
+          <ListItem key={genre.id} onClick={() => onSelectedGenre(genre)}>
             <Link key={genre.id}>
               <HStack>
                 <Image
