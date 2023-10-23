@@ -13,7 +13,7 @@ import { MdPhoneIphone } from "react-icons/md";
 import { ImTux } from "react-icons/im";
 import { GiGameConsole } from "react-icons/gi";
 import { IoLogoGameControllerA } from "react-icons/io";
-import { Platform } from "../hooks/useGames";
+import { Platform } from "../hooks/usePlatforms";
 
 interface Props {
   platforms: Platform[];
