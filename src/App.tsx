@@ -1,7 +1,7 @@
 import { Box, Flex, Grid, GridItem } from "@chakra-ui/react";
 import { useState } from "react";
 import GenreList from "./components/GenreList";
-import Nav from "./components/Nav";
+import NavBar from "./components/NavBar";
 import GameGrid from "./components/GameGrid";
 import PlatformSelector from "./components/PlatformSelector";
 import { Platform } from "./hooks/usePlatforms";
@@ -29,7 +29,7 @@ function App() {
       h="100vh"
     >
       <GridItem bg="gray.600" area="nav">
-        <Nav></Nav>
+        <NavBar></NavBar>
       </GridItem>
       <GridItem padding="10px" px="10px" area="aside">
         <GenreList
