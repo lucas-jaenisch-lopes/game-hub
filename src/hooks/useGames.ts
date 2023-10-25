@@ -8,6 +8,7 @@ export interface Game {
   released: string;
   metacritic: number;
   background_image: string;
+  rating_top: number;
   parent_platforms: {
     platform: {
       id: number;
