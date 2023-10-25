@@ -30,7 +30,7 @@ function App() {
       gap={4}
       h="100vh"
     >
-      <GridItem bg="gray.600" area="nav">
+      <GridItem area="nav">
         <NavBar
           onSearch={(searchText) => setGameQuery({ ...gameQuery, searchText })}
         />
