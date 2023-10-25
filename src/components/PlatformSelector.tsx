@@ -6,7 +6,6 @@ import {
   MenuItem,
   MenuList,
 } from "@chakra-ui/react";
-import { BsChevronDown } from "react-icons/bs";
 import usePlatforms, { Platform } from "../hooks/usePlatforms";
 import { platformIconMap } from "../services/platform-icon-map";
 import { ChevronDownIcon } from "@chakra-ui/icons";
