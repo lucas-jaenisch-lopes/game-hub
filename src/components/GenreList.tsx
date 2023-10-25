@@ -17,13 +17,12 @@ interface Props {
 }
 
 const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
-  const { data, error, isLoading } = useGenres();
+  const { data } = useGenres();
 
   return (
     <>
       <Heading>Genres</Heading>
       <List spacing="10px">
-        {isLoading && <Spinner></Spinner>}
         {data.map((genre) => (
           <ListItem
             fontWeight={genre.id === selectedGenre?.id ? "bold" : "normal"}
