@@ -15,9 +15,6 @@ const GameGrid = ({ gameQuery }: Props) => {
 
   return (
     <>
-      <Heading padding="10px">
-        {gameQuery.platform?.name} {gameQuery.genre?.name} Games
-      </Heading>
       {error && <Text>{error}</Text>}
       <SimpleGrid
         columns={{ sm: 1, md: 2, lg: 3, xl: 4 }}
