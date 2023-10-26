@@ -21,7 +21,9 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
 
   return (
     <>
-      <Heading>Genres</Heading>
+      <Heading marginTop={9} marginBottom={3}>
+        Genres
+      </Heading>
       <List spacing="10px">
         {data.map((genre) => (
           <ListItem
@@ -38,7 +40,7 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
                   objectFit="cover"
                   boxSize="32px"
                 />
-                <Text whiteSpace="nowrap" variant="link">
+                <Text whiteSpace="nowrap" variant="link" fontSize="large">
                   {genre.name}
                 </Text>
               </HStack>

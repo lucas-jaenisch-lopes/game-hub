@@ -9,7 +9,7 @@ interface Props {
 const PlatformIconList = ({ platforms }: Props) => {
   return (
     <HStack>
-      {platforms.map((platform) => (
+      {platforms?.map((platform) => (
         <Tooltip key={platform.id} label={platform.name} placement="top">
           <span>
             <Icon
