@@ -14,7 +14,6 @@ export interface Game {
       name: string;
       slug: string;
     };
-  favorite: boolean;
   }[];
 }
 
