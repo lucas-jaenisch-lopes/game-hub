@@ -1,12 +1,10 @@
-import { Image, HStack, Box, IconButton } from "@chakra-ui/react";
+import { Image, HStack } from "@chakra-ui/react";
 import { Card, Heading, CardBody } from "@chakra-ui/react";
 import { Game } from "../hooks/useGames";
 import PlatformIconList from "./PlatformIconList";
 import CriticScore from "./CriticScore";
 import getCroppedImageUrl from "../services/image-url";
 import FavoriteButton from "./FavoriteButton";
-import { StarIcon } from "@chakra-ui/icons";
-import { AiOutlineStar } from "react-icons/ai";
 
 interface Props {
   game: Game;
@@ -16,8 +14,10 @@ const GameCard = ({ game }: Props) => {
   return (
     <Card>
       <FavoriteButton />
-      <Image src={getCroppedImageUrl(game.background_image)} />
-
+      <Image
+        src={getCroppedImageUrl(game.background_image)}
+        borderTopRadius="lg"
+      />
       <CardBody>
         <HStack justifyContent="space-between" marginBottom={3}>
           <PlatformIconList

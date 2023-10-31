@@ -19,7 +19,13 @@ const theme = extendTheme({
       800: "#121212",
       900: "#111",
     },
-  },
+    blackAlpha: {
+      100: "rgba(0, 0, 0, 0.06)",
+      200: "rgba(0, 0, 0, 0.30)",
+      300: "rgba(0, 0, 0, 0.60)",
+      700: "rgba(0, 0, 0, 0.64)"
+    },
+  },  
 });
 
 export default theme;
