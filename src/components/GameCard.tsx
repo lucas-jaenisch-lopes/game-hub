@@ -14,12 +14,9 @@ interface Props {
 const GameCard = ({ game }: Props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <Card>
+    <Card borderRadius="lg" overflow="hidden">
       <FavoriteButton />
-      <Image
-        src={getCroppedImageUrl(game.background_image)}
-        borderTopRadius="lg"
-      />
+      <Image src={getCroppedImageUrl(game.background_image)} />
       <CardBody onClick={onOpen}>
         <GameModal gameDetails={game} isOpen={isOpen} onClose={onClose} />
         <HStack justifyContent="space-between" marginBottom={3}>
