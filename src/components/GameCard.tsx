@@ -17,8 +17,7 @@ const GameCard = ({ game }: Props) => {
     <Card borderRadius="lg" overflow="hidden">
       <FavoriteButton />
       <Image src={getCroppedImageUrl(game.background_image)} />
-      <CardBody onClick={onOpen}>
-        <GameModal gameDetails={game} isOpen={isOpen} onClose={onClose} />
+      <CardBody>
         <HStack justifyContent="space-between" marginBottom={3}>
           <PlatformIconList
             platforms={game.parent_platforms?.map((p) => p.platform)}
